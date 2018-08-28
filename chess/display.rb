@@ -1,5 +1,7 @@
 require 'colorize'
-require 'colorized_string'
+# require 'colorized_string'
+require_relative 'Board.rb'
+require_relative 'cursor.rb'
 
 class Display
   def initialize(board)

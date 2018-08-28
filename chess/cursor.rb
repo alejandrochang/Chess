@@ -88,10 +88,14 @@ class Cursor
     when :down
       self.update_pos(MOVES[:down])
     when :ctrl_c
-      next 
+      Porcess.exit(0) 
     end 
   end
 
   def update_pos(diff)
+    new_postion = @cursor_pos + diff
+    if Board.valid_pos?(new_postion)
+      @cursor_pos = new_postion
+    end
   end
 end
