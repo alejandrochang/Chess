@@ -1,6 +1,6 @@
 require 'byebug'
-require_relative "Piece.rb"
-require_relative "NullPiece.rb"
+require_relative "pieces.rb"
+require_relative "nullPiece.rb"
 require_relative "cursor.rb"
 
 class Board  
@@ -42,15 +42,15 @@ class Board
     # debugger 
     (0..1).each do |i|
        (0..7).each do |j|
-         pos= i,j
-         self[pos] = :chess_piece
+         pos= [i,j]
+         self[pos] = Piece.new(:black, pos)
        end 
      end 
      
      (6..7).each do |i|
        (0..7).each do |j|
-         pos = i,j
-         self[pos] = :enemy_chess_piece
+         pos = [i,j]
+         self[pos] = Piece.new(:white, pos)
        end 
      end 
   end 

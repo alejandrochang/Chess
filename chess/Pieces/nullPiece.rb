@@ -1,12 +1,12 @@
-require_relative "Piece.rb"
+require_relative "piece.rb"
 require 'singleton'
 
 class NullPiece < Piece
   include Singleton
-  attr_accessor :null
+  attr_accessor :null, :value
   def initialize
-    @null = :null
-    @value = "_"
+    @null = "null"
+    @value = "___"
   end 
 
   
@@ -14,7 +14,7 @@ class NullPiece < Piece
   end
   
   def symbol
-    :null
+    "null"
   end
   
 end

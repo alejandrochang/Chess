@@ -88,7 +88,7 @@ class Cursor
     when :down
       self.update_pos(MOVES[:down])
     when :ctrl_c
-      Porcess.exit(0) 
+      Process.exit(0) 
     end 
   end
 
