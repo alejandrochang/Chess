@@ -28,10 +28,10 @@ class Display
           print @board[pos].value.colorize(:background => :blue) 
         elsif row_i.odd? 
           print @board[pos].value.colorize(:color => :black, :background => :light_black) if col_i.even? 
-          print @board[pos].value.colorize(:color => :red, :background => :light_white) if col_i.odd?
+          print @board[pos].value.colorize(:color => :light_red, :background => :light_white) if col_i.odd?
         elsif row_i.even?
           print @board[pos].value.colorize(:color => :black, :background => :light_black) if col_i.odd?
-          print @board[pos].value.colorize(:color => :red, :background => :light_white) if col_i.even?
+          print @board[pos].value.colorize(:color => :light_red, :background => :light_white) if col_i.even?
         end  
       end 
       print "\n"
