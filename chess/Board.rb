@@ -9,6 +9,7 @@ class Board
     @empty_space = NullPiece.instance
     @rows = Array.new(8) {Array.new(8, @empty_space)}
     populate_null
+    place_pawn
   end 
   
   def [](pos)
@@ -53,6 +54,15 @@ class Board
          self[pos] = Piece.new(:white, pos)
        end 
      end 
+  end 
+  
+  def place_pawn
+    # debugger
+    # 8.times do |j| 
+    #   i = 1
+    #   pos = i,j
+    #   Pawn.new(:white, pos)
+    # end 
   end 
   
   def populate_pieces

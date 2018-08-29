@@ -3,6 +3,7 @@ class Piece
   
   def initialize(color, pos)
     @color = color
+    @board = board
     @value = " P "
     @pos = pos
   end 
